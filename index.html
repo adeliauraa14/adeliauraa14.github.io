@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adelia Aura Nabilla | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg, #ffe4ef, #ffd6e8);
+      color:#333;
+    }
+
+    header{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:40px;
+    }
+
+    .hero{
+      background:white;
+      padding:50px;
+      border-radius:30px;
+      max-width:900px;
+      box-shadow:0 10px 30px rgba(255, 105, 180, 0.2);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero h1{
+      font-size:3rem;
+      color:#ff4f9a;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      line-height:1.8;
+      font-size:1rem;
+      margin-bottom:20px;
+    }
+
+    .contact{
+      margin-top:20px;
+    }
+
+    .contact a{
+      text-decoration:none;
+      color:#ff4f9a;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .contact a:hover{
+      color:#ff1f7a;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.5rem;
+      color:#ff4f9a;
+      margin-bottom:50px;
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 8px 20px rgba(255, 105, 180, 0.15);
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:25px;
+    }
+
+    .card-content h3{
+      color:#ff4f9a;
+      margin-bottom:15px;
+      font-size:1.5rem;
+    }
+
+    .card-content p{
+      line-height:1.7;
+      text-align:justify;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      background:#ff4f9a;
+      color:white;
+      margin-top:50px;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:768px){
+      .hero h1{
+        font-size:2.2rem;
+      }
+
+      .hero{
+        padding:30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header>
+    <div class="hero">
+      <h1>ADELIA AURA NABILLA</h1>
+
+      <p>
+        Saya adalah individu yang sangat termotivasi dan antusias dengan semangat
+        untuk terus belajar dan berkembang secara pribadi. Saya memiliki
+        keterampilan komunikasi dan interpersonal yang sangat baik, yang
+        memungkinkan saya bekerja secara efektif baik secara mandiri maupun dalam tim.
+      </p>
+
+      <div class="contact">
+        <p>📞 088286367289</p>
+        <p>📧 adeliauraa14@gmail.com</p>
+
+        <p>
+          🔗 
+          <a href="https://www.linkedin.com/in/adelia-aura-nabilla19b221334" target="_blank">
+            LinkedIn
+          </a>
+          |
+          <a href="https://github.com/adeliauraa14" target="_blank">
+            GitHub
+          </a>
+        </p>
+
+        <p>📍 Poncowarno, Kec. Kalirejo, Kab. Lampung Tengah, Lampung</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROJECT -->
+  <section>
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects">
+
+      <!-- PROJECT 1 -->
+      <div class="card">
+        <img src="Gambar/smart_hygine.png" alt="Smart Hygiene">
+
+        <div class="card-content">
+          <h3>Smart Hygiene System</h3>
+
+          <p>
+            Project Smart Hygiene merupakan sistem kebersihan otomatis berbasis ESP32
+            yang dirancang untuk membantu menjaga higienitas tanpa sentuhan langsung.
+            Sistem ini menggunakan sensor PIR untuk mendeteksi adanya gerakan atau
+            keberadaan tangan pengguna.
+          </p>
+
+          <br>
+
+          <p>
+            Ketika gerakan terdeteksi, ESP32 akan mengaktifkan relay yang mengontrol
+            pompa cairan seperti hand sanitizer atau sabun cair, kemudian servo akan
+            bergerak membuka dispenser, dan LED menyala sebagai indikator bahwa sistem
+            sedang bekerja.
+          </p>
+
+          <br>
+
+          <p>
+            Setelah beberapa detik, pompa dan LED akan mati serta servo kembali ke
+            posisi awal. Sistem ini cocok diterapkan di tempat umum karena lebih
+            praktis, hemat, dan membantu mengurangi penyebaran kuman melalui kontak
+            langsung.
+          </p>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="card">
+        <img src="Gambar/dht_ldr_alarm.png" alt="Monitoring Environment">
+
+        <div class="card-content">
+          <h3>Environment Monitoring System</h3>
+
+          <p>
+            Project ini merupakan sistem monitoring lingkungan berbasis Arduino
+            yang menggunakan sensor DHT22 dan LDR untuk memantau kondisi suhu,
+            kelembapan, dan intensitas cahaya secara real-time.
+          </p>
+
+          <br>
+
+          <p>
+            Sensor DHT22 berfungsi membaca suhu dan kelembapan udara, sedangkan
+            sensor LDR digunakan untuk mendeteksi tingkat cahaya di sekitar.
+            Hasil pembacaan sensor ditampilkan pada LCD I2C 16x2 secara bergantian
+            agar pengguna dapat memantau kondisi lingkungan dengan mudah.
+          </p>
+
+          <br>
+
+          <p>
+            Sistem juga dilengkapi fitur pengaturan batas maksimum (threshold)
+            menggunakan tombol mode, up, dan down. Jika nilai sensor melebihi
+            batas yang telah ditentukan, maka buzzer akan aktif sebagai alarm
+            peringatan.
+          </p>
+
+          <br>
+
+          <p>
+            Project ini cocok digunakan sebagai sistem monitoring ruangan pintar,
+            laboratorium, gudang, maupun area penyimpanan yang memerlukan
+            pengawasan kondisi lingkungan secara otomatis.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Adelia Aura Nabilla | Portfolio Website</p>
+  </footer>
+
+</body>
+</html>
